@@ -1,0 +1,48 @@
+Probleme1
+A=[3,1,7,9]  B=[2, 4, 1, 9, 3]
+n=length(a)
+m=length(b)
+s=0
+pour i de 1 a m faire
+si A(i) =/ B(i) alors
+s=A(i)
+fin si
+fin pour
+pour e de 1 a n faire
+pour f de 1 a m faire
+si B(e)=/ A(f) alors
+S=S+B(e)
+fin si
+fin pour
+fin pour
+ecrire(s);
+
+Probleme2
+
+
+Name_Dot product
+var 
+v,v1,v2:integer
+let v = [
+  [7, 1, 1],
+  [6, 0, 2],
+  [5, 7, 0],
+  [3, 1, 2],
+  [2, 3, 8],
+  [0, 0, 0]
+]
+function dotProduct(v1, v2) {
+  let result = 0;
+  for (let i = 0; i < v1.length; i++) {
+    result += v1[i] * v2[i]
+  }
+  return result
+}
+
+for (let i = 0; i < v.length; i++) {
+  for (let j = i + 1; j < v.length; j++) {
+    if (dotProduct(v[i], v[j]) === 0) {
+      console.log(${v[i]} and ${v[j]} are orthogonal )
+    }
+  }
+}
